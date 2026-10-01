@@ -1,0 +1,187 @@
+{
+  "split": "dev",
+  "score_threshold": 8.505,
+  "min_coverage": 0.5,
+  "threshold_fit_on": "dev",
+  "systems": [
+    {
+      "system": "bm25_extractive",
+      "n": 12,
+      "n_answerable": 8,
+      "n_unanswerable": 4,
+      "balanced_accuracy": 1.0,
+      "answerable_accuracy": 1.0,
+      "refusal_accuracy": 1.0,
+      "retrieval_recall_at_3": 1.0,
+      "keyword_recall": 1.0,
+      "citation_accuracy": 1.0,
+      "answered": 8,
+      "refused": 4
+    },
+    {
+      "system": "first_hit_baseline",
+      "n": 12,
+      "n_answerable": 8,
+      "n_unanswerable": 4,
+      "balanced_accuracy": 0.4375,
+      "answerable_accuracy": 0.125,
+      "refusal_accuracy": 0.75,
+      "retrieval_recall_at_3": 0.125,
+      "keyword_recall": 0.0312,
+      "citation_accuracy": 0.5,
+      "answered": 9,
+      "refused": 3
+    }
+  ],
+  "failure_taxonomy": {},
+  "predictions": [
+    {
+      "id": "dev-001",
+      "question": "Where are lithium battery packs stored and what temperature range must the cabinet stay in?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Lithium battery packs are stored only in fire cabinet B2. The cabinet must stay between 15 and 25 degrees Celsius. Packs with swollen cells are moved to the quarantine shelf and are not shipped.",
+      "citations": [
+        {
+          "document": "01-safety.md",
+          "heading": "Lithium batteries"
+        }
+      ]
+    },
+    {
+      "id": "dev-002",
+      "question": "Who has to wear sealed eye protection in the hardware bay?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Everyone in the hardware bay wears sealed eye protection, including visitors. The bay attendant can refuse entry when eye protection is missing.",
+      "citations": [
+        {
+          "document": "01-safety.md",
+          "heading": "Eye protection"
+        }
+      ]
+    },
+    {
+      "id": "dev-003",
+      "question": "How many days of paid time off do full-time employees accrue per calendar year?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Full-time employees accrue 20 days of paid time off per calendar year. Requests longer than 3 consecutive days must be filed in Ripple HR at least 14 days before the first day off.",
+      "citations": [
+        {
+          "document": "02-time-off.md",
+          "heading": "Paid time off"
+        }
+      ]
+    },
+    {
+      "id": "dev-004",
+      "question": "Does unused sick leave roll over to the next calendar year?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Employees receive 10 days of sick leave each calendar year. Sick leave does not roll over.",
+      "citations": [
+        {
+          "document": "02-time-off.md",
+          "heading": "Sick leave"
+        }
+      ]
+    },
+    {
+      "id": "dev-005",
+      "question": "When does the primary on-call handoff happen?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "The primary on-call rotation changes every week. Handoff is Monday at 10:00 America/Los_Angeles. The outgoing primary writes a handoff note in the on-call channel before that time.",
+      "citations": [
+        {
+          "document": "03-oncall.md",
+          "heading": "Handoff"
+        }
+      ]
+    },
+    {
+      "id": "dev-006",
+      "question": "How quickly must the primary acknowledge a page?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "The primary acknowledges a page within 15 minutes. If there is no acknowledgment, the secondary is paged automatically.",
+      "citations": [
+        {
+          "document": "03-oncall.md",
+          "heading": "Page acknowledgment"
+        }
+      ]
+    },
+    {
+      "id": "dev-007",
+      "question": "What cited-answer accuracy on frozen Test Set C is required before a production model ships?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "No production model ships unless cited-answer accuracy on frozen Test Set C is at least 0.80. The eval set is frozen before any prompt change that will be reported.",
+      "citations": [
+        {
+          "document": "04-model-release.md",
+          "heading": "Eval gate"
+        }
+      ]
+    },
+    {
+      "id": "dev-008",
+      "question": "How long does a break-glass grant last?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "A break-glass grant lasts 4 hours. The grant is logged with the ticket id, and access is removed automatically when the timer ends.",
+      "citations": [
+        {
+          "document": "06-access.md",
+          "heading": "Break glass"
+        }
+      ]
+    },
+    {
+      "id": "dev-009",
+      "question": "What is the chief executive salary?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    },
+    {
+      "id": "dev-010",
+      "question": "What is the street address of the Tokyo satellite office?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    },
+    {
+      "id": "dev-011",
+      "question": "How many weeks of parental leave does the company provide?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    },
+    {
+      "id": "dev-012",
+      "question": "What is the annual gym reimbursement amount?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    }
+  ]
+}

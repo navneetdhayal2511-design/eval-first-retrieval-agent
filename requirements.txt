@@ -1,0 +1,3 @@
+# The agent and the eval harness use the Python standard library only.
+# Install the package in editable mode if you want the retrieval-agent command:
+#   pip install -e .

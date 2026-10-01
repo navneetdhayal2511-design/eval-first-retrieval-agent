@@ -1,0 +1,333 @@
+{
+  "split": "test",
+  "score_threshold": 8.505,
+  "min_coverage": 0.5,
+  "threshold_fit_on": "dev",
+  "systems": [
+    {
+      "system": "bm25_extractive",
+      "n": 23,
+      "n_answerable": 18,
+      "n_unanswerable": 5,
+      "balanced_accuracy": 0.9722,
+      "answerable_accuracy": 0.9444,
+      "refusal_accuracy": 1.0,
+      "retrieval_recall_at_3": 1.0,
+      "keyword_recall": 0.9444,
+      "citation_accuracy": 1.0,
+      "answered": 17,
+      "refused": 6
+    },
+    {
+      "system": "first_hit_baseline",
+      "n": 23,
+      "n_answerable": 18,
+      "n_unanswerable": 5,
+      "balanced_accuracy": 0.3278,
+      "answerable_accuracy": 0.0556,
+      "refusal_accuracy": 0.6,
+      "retrieval_recall_at_3": 0.0556,
+      "keyword_recall": 0.0556,
+      "citation_accuracy": 0.4444,
+      "answered": 20,
+      "refused": 3
+    }
+  ],
+  "failure_taxonomy": {
+    "missed_answer": 1
+  },
+  "predictions": [
+    {
+      "id": "test-001",
+      "question": "What phone number is the hardware emergency line?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "The hardware emergency line is 415-555-0148. For a battery fire, leave the bay and pull the hallway alarm. Do not use water on lithium battery fires.",
+      "citations": [
+        {
+          "document": "01-safety.md",
+          "heading": "Emergency line"
+        }
+      ]
+    },
+    {
+      "id": "test-002",
+      "question": "Should staff use water on a lithium battery fire?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "The hardware emergency line is 415-555-0148. For a battery fire, leave the bay and pull the hallway alarm. Do not use water on lithium battery fires.",
+      "citations": [
+        {
+          "document": "01-safety.md",
+          "heading": "Emergency line"
+        }
+      ]
+    },
+    {
+      "id": "test-003",
+      "question": "Do visitors in the hardware bay need an escort?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Visitors in the hardware bay need a full-time employee escort. Escorts sign the paper log at the bay door.",
+      "citations": [
+        {
+          "document": "01-safety.md",
+          "heading": "Visitors"
+        }
+      ]
+    },
+    {
+      "id": "test-004",
+      "question": "How far in advance must a paid time off request longer than 3 consecutive days be filed in Ripple HR?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Full-time employees accrue 20 days of paid time off per calendar year. Requests longer than 3 consecutive days must be filed in Ripple HR at least 14 days before the first day off.",
+      "citations": [
+        {
+          "document": "02-time-off.md",
+          "heading": "Paid time off"
+        }
+      ]
+    },
+    {
+      "id": "test-005",
+      "question": "How many paid days of bereavement leave are given for the death of a parent?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Bereavement leave is 5 paid days for the death of a spouse, child, parent, or sibling. The manager records bereavement in Ripple HR.",
+      "citations": [
+        {
+          "document": "02-time-off.md",
+          "heading": "Bereavement"
+        }
+      ]
+    },
+    {
+      "id": "test-006",
+      "question": "What two conditions make a page a Sev-1?",
+      "answerable": true,
+      "correct": false,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    },
+    {
+      "id": "test-007",
+      "question": "What does a Sev-2 page mean?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "A Sev-1 page means customer data exposure or a complete API outage. A Sev-2 page means a single region is degraded but a workaround exists.",
+      "citations": [
+        {
+          "document": "03-oncall.md",
+          "heading": "Severity definitions"
+        }
+      ]
+    },
+    {
+      "id": "test-008",
+      "question": "How much is primary on-call pay for a weekday week and for a week that includes the weekend shift?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Primary on-call pay is 400 dollars for a weekday week and 700 dollars when the week includes the weekend shift.",
+      "citations": [
+        {
+          "document": "03-oncall.md",
+          "heading": "On-call pay"
+        }
+      ]
+    },
+    {
+      "id": "test-009",
+      "question": "What has to happen when Test Set C contains refusal mistakes?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Refusal mistakes on Test Set C require human review before the release candidate is approved.",
+      "citations": [
+        {
+          "document": "04-model-release.md",
+          "heading": "Human review"
+        }
+      ]
+    },
+    {
+      "id": "test-010",
+      "question": "When must on-call roll a model back because of live citation precision?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "On-call rolls the model back when live citation precision stays under 0.90 for one hour.",
+      "citations": [
+        {
+          "document": "04-model-release.md",
+          "heading": "Live rollback"
+        }
+      ]
+    },
+    {
+      "id": "test-011",
+      "question": "What three items must a model card list?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Every shipped model has a model card in the release folder. The card lists training data, eval scores, and known failure types.",
+      "citations": [
+        {
+          "document": "04-model-release.md",
+          "heading": "Model cards"
+        }
+      ]
+    },
+    {
+      "id": "test-012",
+      "question": "How soon must the incident commander open the bridge for a Sev-1?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "For a Sev-1, the incident commander opens the bridge within 10 minutes of the page.",
+      "citations": [
+        {
+          "document": "05-incidents.md",
+          "heading": "Incident bridge"
+        }
+      ]
+    },
+    {
+      "id": "test-013",
+      "question": "How often is the public status page updated during a Sev-1?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "During a Sev-1, the communications lead updates the public status page every 30 minutes until the incident is resolved.",
+      "citations": [
+        {
+          "document": "05-incidents.md",
+          "heading": "Status page"
+        }
+      ]
+    },
+    {
+      "id": "test-014",
+      "question": "How many business days after a Sev-1 is the blameless postmortem due?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "A blameless postmortem is published within 5 business days after a Sev-1. The postmortem lists the timeline, the impact, and the corrective actions.",
+      "citations": [
+        {
+          "document": "05-incidents.md",
+          "heading": "Postmortem"
+        }
+      ]
+    },
+    {
+      "id": "test-015",
+      "question": "What Vault path holds production retrieval secrets?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Production retrieval secrets live in Vault at path kv/prod/retrieval. Application code reads them at startup and does not print them in logs.",
+      "citations": [
+        {
+          "document": "06-access.md",
+          "heading": "Production secrets"
+        }
+      ]
+    },
+    {
+      "id": "test-016",
+      "question": "What encryption requirement must company laptops meet before they join the production network?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Company laptops must use full-disk encryption. A laptop that fails the encryption check cannot join the production network.",
+      "citations": [
+        {
+          "document": "06-access.md",
+          "heading": "Device encryption"
+        }
+      ]
+    },
+    {
+      "id": "test-017",
+      "question": "Which two systems does IT revoke on the employee last day?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "On the employee last day, IT revokes GitHub and Vault access before the end of that calendar day.",
+      "citations": [
+        {
+          "document": "06-access.md",
+          "heading": "Offboarding"
+        }
+      ]
+    },
+    {
+      "id": "test-018",
+      "question": "Where are swollen lithium cells moved, and may they be shipped?",
+      "answerable": true,
+      "correct": true,
+      "refused": false,
+      "answer": "Lithium battery packs are stored only in fire cabinet B2. The cabinet must stay between 15 and 25 degrees Celsius. Packs with swollen cells are moved to the quarantine shelf and are not shipped.",
+      "citations": [
+        {
+          "document": "01-safety.md",
+          "heading": "Lithium batteries"
+        }
+      ]
+    },
+    {
+      "id": "test-019",
+      "question": "What is the employee stock option strike price?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    },
+    {
+      "id": "test-020",
+      "question": "Which vendor provides the free lunch program?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    },
+    {
+      "id": "test-021",
+      "question": "How many dollars is the monthly remote work stipend?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    },
+    {
+      "id": "test-022",
+      "question": "What is the intern conversion bonus?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    },
+    {
+      "id": "test-023",
+      "question": "Which floor of the parking garage is reserved for contractors?",
+      "answerable": false,
+      "correct": true,
+      "refused": true,
+      "answer": "I cannot find this in the handbook.",
+      "citations": []
+    }
+  ]
+}

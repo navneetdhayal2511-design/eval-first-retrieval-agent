@@ -1,0 +1,17 @@
+[project]
+name = "eval-first-retrieval-agent"
+version = "0.1.0"
+description = "Cited document question answering with a frozen eval set and an abstention threshold fit on dev only."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "navneetdhayal2511-design" }]
+
+[project.scripts]
+retrieval-agent = "retrieval_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
